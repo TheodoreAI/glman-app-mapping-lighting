@@ -1,4 +1,4 @@
 
-ERROR: 0:83: 'd' : redefinition 
+ERROR: 0:29: 'assign' : l-value required "Y0" (cannot modify a uniform)
 
 

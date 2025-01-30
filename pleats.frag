@@ -4,8 +4,7 @@
 
 uniform float	uKa, uKd, uKs;	// coefficients of each type of lighting
 uniform float	uShininess;	// specular exponent
-uniform vec4    uColor;
-uniform vec4    uSpecularColor;
+
 
 // interpolated from the vertex shader:
 in  vec2  vST;                  // texture coords
@@ -19,6 +18,9 @@ in  vec3  vMC;			// model coordinates
 //	Leave out the #version line, or use 120
 //	Change the "in" to "varying"
 
+vec3 uColor = vec3(1.0, 0.5, 0.0);
+vec3 uSpecularColor = vec3(1.0, 1.0, 1.0);
+
 void main( ){
 
 	// now use myColor in the per-fragment lighting equations:
@@ -26,10 +28,10 @@ void main( ){
         vec3 Light     = normalize(vL);
         vec3 Eye       = normalize(vE);
 
-        vec4 ambient = uKa * uColor;
+        vec3 ambient = uKa * uColor;
 
         float dd = max( dot(Normal,Light), 0. );       // only do diffuse if the light can see the point
-        vec4 diffuse = uKd * dd * uColor;
+        vec3 diffuse = uKd * dd * uColor;
 
         float s = 0.;
         if( dd > 0. )              // only do specular if the light can see the point
@@ -39,6 +41,6 @@ void main( ){
                 if( cosphi > 0. )
                         s = pow( max( cosphi, 0. ), uShininess );
         }
-        vec4 specular = vec4(uKs * s * uSpecularColor.rgb, 1.0);
-        gl_FragColor = ambient + diffuse + specular;
+        vec3 specular = uKs * s * uSpecularColor;
+        gl_FragColor = vec4(ambient + diffuse + specular, 1.);
 }

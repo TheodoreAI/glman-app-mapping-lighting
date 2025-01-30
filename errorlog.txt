@@ -1,4 +1,7 @@
 
-ERROR: 0:50: 'constructor' : too many arguments 
+ERROR: 0:31: '=' :  cannot convert from '3-component vector of highp float' to '4-component vector of highp float'
+ERROR: 0:34: '=' :  cannot convert from '3-component vector of highp float' to '4-component vector of highp float'
+ERROR: 0:44: '=' :  cannot convert from '3-component vector of highp float' to '4-component vector of highp float'
+ERROR: 0:46: 'constructor' : too many arguments 
 
 

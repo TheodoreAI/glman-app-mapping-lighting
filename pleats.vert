@@ -44,6 +44,6 @@ main( )
 	
 
 	vL = normalize(LIGHTPOSITION - ECposition.xyz); // vector from the point to the light position
-	vE = normalize(vec3( 0., 0., 5. ) - ECposition.xyz); // vector from the point to the eye position
+	vE = normalize(vec3( 0., 0., 0. ) - ECposition.xyz); // vector from the point to the eye position
 	gl_Position = gl_ModelViewProjectionMatrix * vert;
 }

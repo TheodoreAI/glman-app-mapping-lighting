@@ -14,7 +14,5 @@ Program    Pleats                          \
     uLightX <-20.0 5.0 20.0>               \
     uLightY <-20.0 10.0 20.0>              \
     uLightZ <-20.0 20.0 20.0>              \
-    uColor <1.0 0.7 0.5 1.0>               \
-    uSpecularColor <1.0 .5 1.0 1.0>       \
 
 QuadXY   -0.2 1.0 128 128

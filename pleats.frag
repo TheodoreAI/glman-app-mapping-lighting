@@ -4,8 +4,8 @@
 
 uniform float	uKa, uKd, uKs;	// coefficients of each type of lighting
 uniform float	uShininess;	// specular exponent
-uniform vec4 uColor;
-uniform vec4 uSpecularColor;
+uniform vec4    uColor;
+uniform vec4    uSpecularColor;
 
 // interpolated from the vertex shader:
 in  vec2  vST;                  // texture coords
@@ -19,14 +19,9 @@ in  vec3  vMC;			// model coordinates
 //	Leave out the #version line, or use 120
 //	Change the "in" to "varying"
 
-
-
-void
-main( )
-{
+void main( ){
 
 	// now use myColor in the per-fragment lighting equations:
-
         vec3 Normal    = normalize(vN);
         vec3 Light     = normalize(vL);
         vec3 Eye       = normalize(vE);

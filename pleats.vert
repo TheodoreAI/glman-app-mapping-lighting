@@ -29,7 +29,7 @@ main( )
 	vec4 vert = gl_Vertex;
 	float Y0 = 1.0; // 1 is a good one
 	vert.z = uA*(Y0 - vert.y)*sin(2.0 * PI*vert.x/uP);
-	vMC = gl_Vertex.xyz;
+	vMC = vert.xyz;
 
 	vec4 ECposition = gl_ModelViewMatrix * vert; // eye coordinate position
 
@@ -43,7 +43,7 @@ main( )
 	vN = normalize(cross(Tx, Ty));
 	
 
-	vL = LIGHTPOSITION - ECposition.xyz; // vector from the point to the light position
-	vE = vec3( 0., 0., 5. ) - ECposition.xyz; // vector from the point to the eye position
+	vL = normalize(LIGHTPOSITION - ECposition.xyz); // vector from the point to the light position
+	vE = normalize(vec3( 0., 0., 5. ) - ECposition.xyz); // vector from the point to the eye position
 	gl_Position = gl_ModelViewProjectionMatrix * vert;
 }

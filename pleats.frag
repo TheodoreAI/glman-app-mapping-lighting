@@ -1,7 +1,7 @@
 #version 330 compatibility
 
 // you can set these 4 uniform variables dynamically or hardwire them:
-
+//* per fragment lighting source - https://web.engr.oregonstate.edu/~mjb/cs557/Handouts/lighting.1pp.pdf*/
 uniform float	uKa, uKd, uKs;	// coefficients of each type of lighting
 uniform float	uShininess;	// specular exponent
 

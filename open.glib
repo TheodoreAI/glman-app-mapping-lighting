@@ -11,8 +11,5 @@ Program    Pleats                          \
     uKd <0.0 0.6 1.0>                      \
     uKs <0.0 0.3 1.0>                      \
     uShininess <1.0 10.0 100.0>            \
-    uLightX <-20.0 5.0 20.0>               \
-    uLightY <-20.0 10.0 20.0>              \
-    uLightZ <-20.0 20.0 20.0>              \
 
 QuadXY   -0.2 1.0 128 128

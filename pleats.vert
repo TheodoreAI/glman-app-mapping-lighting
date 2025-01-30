@@ -14,10 +14,9 @@ out  vec3  vMC;			// model coordinates
 uniform float uA;
 uniform float uP;
 
-uniform float uLightX, uLightY, uLightZ;
 
 
-vec3 LIGHTPOSITION = vec3( uLightX, uLightY, uLightZ );
+vec3 LIGHTPOSITION = vec3( 5.0, 5.0, 0. );
 
 
 #define PI 3.141592
@@ -43,7 +42,7 @@ main( )
 	vN = normalize(cross(Tx, Ty));
 	
 
-	vL = normalize(LIGHTPOSITION - ECposition.xyz); // vector from the point to the light position
-	vE = normalize(vec3( 0., 0., 0. ) - ECposition.xyz); // vector from the point to the eye position
+	vL = LIGHTPOSITION - ECposition.xyz; // vector from the point to the light position
+	vE = vec3( 0., 0., 0. ) - ECposition.xyz; // vector from the point to the eye position
 	gl_Position = gl_ModelViewProjectionMatrix * vert;
 }

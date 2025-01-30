@@ -16,7 +16,9 @@ uniform float uP;
 
 uniform float uLightX, uLightY, uLightZ;
 
+
 vec3 LIGHTPOSITION = vec3( uLightX, uLightY, uLightZ );
+
 
 #define PI 3.141592
 
